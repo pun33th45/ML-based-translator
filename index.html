@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ML Translator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background: #f7f7f7;
+      }
+      .container {
+        max-width: 500px;
+        margin: auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #ccc;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+      button {
+        background: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      .result {
+        background: #e9ecef;
+        padding: 10px;
+        border-radius: 4px;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>ML Based Translator</h2>
+      <form method="post">
+        <label for="text">Text to Translate:</label>
+        <textarea id="text" name="text" rows="4" required>{{ text }}</textarea>
+        <label for="src_lang">Source Language:</label>
+        <input
+          id="src_lang"
+          name="src_lang"
+          type="text"
+          placeholder="e.g. en"
+          required
+          value="{{ src_lang }}"
+        />
+        <label for="tgt_lang">Target Language:</label>
+        <input
+          id="tgt_lang"
+          name="tgt_lang"
+          type="text"
+          placeholder="e.g. hi"
+          required
+          value="{{ tgt_lang }}"
+        />
+        <button type="submit">Translate</button>
+        <button
+          type="button"
+          onclick="window.location.href='/'"
+          style="margin-left: 10px; background: #6c757d"
+        >
+          Reset
+        </button>
+      </form>
+      {% if translation and request.method == 'POST' %}
+      <div class="result">
+        <strong>ML Translation:</strong>
+        <p>{{ translation }}</p>
+      </div>
+      {% endif %} {% if basic_translation and request.method == 'POST' %}
+      <div class="result">
+        <strong>Basic Translation:</strong>
+        <p>{{ basic_translation }}</p>
+      </div>
+      {% endif %} {% if bleu_ml is not none and bleu_basic is not none and
+      request.method == 'POST' %}
+      <div class="result">
+        <strong>BLEU Score (ML):</strong> {{ bleu_ml }}<br />
+        <strong>BLEU Score (Basic):</strong> {{ bleu_basic }}<br />
+        <strong>Improvement:</strong> {{ improvement }}
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
