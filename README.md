@@ -18,18 +18,13 @@ Supports English → **French, Hindi, Russian, and Spanish**, with **BLEU score 
 
 Below is an example screenshot of the translator interface:
 
-![Translator Screenshot](screenshot.png)
-
-🔗 **Source:** `screenshot.png`
+## 📸 Output Screenshot
+![Translator Screenshot](https://raw.githubusercontent.com/pun33th45/ML-based-translator/main/screenshot.png)
 
 ---
 
 ## 📄 Research Paper
-
-You can read the full research paper associated with this project here:
-
-👉 **[Download Research Paper (PDF)](research-paper.pdf)**  
-🔗 **Source:** `research-paper.pdf`
+👉 [Download Research Paper (PDF)](https://raw.githubusercontent.com/pun33th45/ML-based-translator/main/research-paper.pdf)
 
 ---
 
