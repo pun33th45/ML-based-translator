@@ -18,7 +18,7 @@ Supports English → **French, Hindi, Russian, and Spanish**, with **BLEU score 
 
 Below is an example screenshot of the translator interface:
 
-![Translator Screenshot] <img src="https://github.com/pun33th45/ML-based-translator/blob/7dee4dbd4e1b4e2a485ee1e398e36769bce94c81/screenshots/output.png" alt="Translator Screenshot" width="400">
+<img src="https://github.com/pun33th45/ML-based-translator/blob/7dee4dbd4e1b4e2a485ee1e398e36769bce94c81/screenshots/output.png" alt="Translator Screenshot" width="350">
 
 
 ---
