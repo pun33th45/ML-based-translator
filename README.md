@@ -2,71 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>ML-Based Language Translator — README</title>
+  <title>ML-Based Language Translator</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;max-width:740px;margin:36px auto;color:#111}
-    header{display:flex;gap:16px;align-items:center}
-    img.sshot{max-width:320px;border:1px solid #ddd;padding:6px;background:#fff}
-    h1{font-size:20px;margin:0}
-    p.small{margin:6px 0;color:#444}
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;margin:28px;max-width:900px;color:#111}
+    header{display:flex;align-items:flex-start;gap:20px}
+    img.sshot{max-width:280px;border:1px solid #ddd;padding:6px;background:#fff}
+    h1{margin:0 0 6px;font-size:20px}
+    p{margin:6px 0;color:#444}
     ul{margin:8px 0 12px 20px}
     pre{background:#f6f8fa;padding:10px;border-radius:6px;overflow:auto}
-    .meta{font-size:13px;color:#555;margin-top:10px}
-    a.button{display:inline-block;margin-top:8px;padding:8px 10px;background:#0366d6;color:#fff;text-decoration:none;border-radius:6px;font-size:13px}
+    a.btn{display:inline-block;padding:8px 10px;background:#0366d6;color:#fff;text-decoration:none;border-radius:6px;font-size:13px;margin-right:8px}
     footer{margin-top:18px;font-size:12px;color:#666}
-    .src-link{font-size:12px;color:#0366d6;text-decoration:none}
   </style>
 </head>
 <body>
   <header>
     <div>
       <h1>ML-Based Language Translator</h1>
-      <p class="small">MarianMT-based English → French / Hindi / Russian / Spanish + BLEU evaluation.</p>
-    </div>
+      <p>MarianMT (Helsinki-NLP) English → French/Hindi/Russian/Spanish + BLEU eval.</p>
 
-    <!-- Screenshot -->
-    <img class="sshot" src="3a8ec71c-b6c7-4a1f-9aaa-6116ea5ff3a2.png" alt="ML translator screenshot">
-  </header>
+      <ul>
+        <li>Helsinki-NLP MarianMT models</li>
+        <li>BLEU score with NLTK</li>
+        <li>CLI: <code>translator.py</code></li>
+      </ul>
 
-  <!-- Screenshot Source Link -->
-  <p><a class="src-link" href="https://github.com/pun33th45/ML-based-translator/blob/bdeaaedf1bf694613b7ccd99d9c378a5f2cd7988/screenshots/output.png" target="_blank">
-    🔗 Source (Screenshot)
-  </a></p>
-
-  <section>
-    <ul>
-      <li>Pretrained Helsinki-NLP MarianMT models</li>
-      <li>BLEU score evaluation using NLTK</li>
-      <li>Simple CLI interface (translator.py)</li>
-    </ul>
-
-    <strong>Quick install</strong>
-    <pre>git clone https://github.com/your-username/ml-language-translator.git
+      <p><strong>Quick run</strong></p>
+      <pre>git clone https://github.com/your-username/ml-language-translator.git
 cd ml-language-translator
 pip install -r requirements.txt
-python -c "import nltk; nltk.download('punkt')" </pre>
+python translator.py</pre>
+    </div>
 
-    <strong>Run</strong>
-    <pre>python translator.py
-# choose target language, enter English sentence, view ML translation + BLEU</pre>
+    <!-- Put the actual image file (same folder) -->
+    <img class="sshot" src="https://github.com/pun33th45/ML-based-translator/blob/41a57b5371dd38e615c989d40e71d13d49a2a356/screenshots/output.png" alt="ML translator screenshot">
+  </header>
 
-    <!-- Research Paper -->
-    <p class="meta">
-      <a class="button" href="d46d3a58-2026-4a2b-a3dc-fa43d38dfa36.pdf" target="_blank">Open research paper (PDF)</a>
+  <p>
+    <a class="btn" href="3a8ec71c-b6c7-4a1f-9aaa-6116ea5ff3a2.png" target="_blank">Screenshot (file)</a>
+    <a class="btn" href="d46d3a58-2026-4a2b-a3dc-fa43d38dfa36.pdf" target="_blank">Research paper (PDF)</a>
+  </p>
 
-      <!-- Research Paper Source Link -->
-      <a class="src-link" href="https://github.com/pun33th45/ML-based-translator/blob/bdeaaedf1bf694613b7ccd99d9c378a5f2cd7988/screenshots/research%20paper.pdf" target="_blank">
-        🔗 Source (Research Paper)
-      </a>
+  <!-- If you want GitHub source links (replace placeholders) -->
+  <p style="font-size:13px;color:#444">
+    Source (screenshot): <a href="https://github.com/pun33th45/ML-based-translator/blob/41a57b5371dd38e615c989d40e71d13d49a2a356/screenshots/output.png" target="_blank">github.com/.../screenshot.png</a><br>
+    Source (paper): <a href="https://github.com/pun33th45/ML-based-translator/blob/41a57b5371dd38e615c989d40e71d13d49a2a356/screenshots/research%20paper.pdf" target="_blank">github.com/.../research-paper.pdf</a>
+  </p>
 
-      <!-- Required file citation token for uploaded paper -->
-      <span style="display:block;margin-top:6px">:contentReference[oaicite:0]{index=0}</span>
-    </p>
-  </section>
-
-  <footer>
-    <small>License: MIT — Contribute: add languages, expand reference_translations/, or improve UI.</small>
-  </footer>
+  <footer>License: MIT</footer>
 </body>
 </html>
